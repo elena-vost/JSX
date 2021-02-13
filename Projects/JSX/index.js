@@ -1,7 +1,18 @@
+function getNum() {
+    return Math.floor(Math.random() * 10) +1;
+}
 class NumPicker extends React.Component {
     render (){
-        return(
-
+        const num = getNum();
+        return (
+            <div>
+                <h1>Your number is: {  num} </h1>
+                <p>{num === 7 ? 'Congrats!' : 'Unlucky!'}</p>
+                {
+                    num === 7 
+                    ? <img src="https://i.pinimg.com/originals/8d/a3/cc/8da3cc2c3db6b45b56eb24b622c44c11.gif" /> 
+                    : null}
+            </div>
         );
     }
 }
